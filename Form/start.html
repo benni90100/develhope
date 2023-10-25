@@ -5,8 +5,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>HTML Lesson</title>
     <style>
       label {
@@ -16,24 +15,53 @@
   </head>
 
   <body>
-    <form action="">
-      <label for="email">E-Mail</label>
-      <input type="email" name="email" id="email"><br>
-      <label for="password">Password</label>
-      <input type="password" name="password" id="password"><br>
-      
-      <lable for="name">Name</lable><br>
-      <input type="text" name="name" id="name"><br>
-      
-      <label for="lastName">Last Name</label>
-      <input type="text" name="lastName" id="lastName"><br>
-      <label for="date">Date of Birth</label>
-      <input type="date" name="date" id="date"><br>
-      <label for="tel">Telephone number</label>
-      <input type="tel" name="tel" id="tel">
-      <label for="check">choosing plans</label>
-      <input type="checkbox" name="check" id="check">
-      
+    <form action>
+      <!-- il tag fieldset mi consente di creare un contenitore per il mio form -->
+      <fieldset>
+        <legend>Registrati</legend>
+        <!-- ai vari label e input di tipo text passo il comando required per 
+        dire che sono obbligatori -->
+        <label for="email" >E-Mail</label>
+        <input type="email" name="email" id="email" required><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required><br>
+
+        <lable for="name">Nome</lable><br>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="lastName" >Cognome</label>
+        <input type="text" name="lastName" id="lastName"><br>
+        <!-- con il type date si mette una data -->
+        <label for="date">Data Di Nascita</label>
+        <input type="date" name="date" id="date"><br>
+        <!-- al tag tel do una lunghezza massima di 10 caratteri  -->
+        <label for="tel">Telefono</label>
+        <input type="tel" name="tel" id="tel"  maxlength="10">
+        <label for="plane">Scegli un Piano</label>
+        <!-- il primo valore della select è vuoto per non avere un opzione 
+        predefinita che potrebbe condurre ad errore -->
+        <select name="plane" id="plane">
+          <option value>select</option>
+          <option value="free">free plane</option>
+          <option value="standard">standard Plane 10€</option>
+          <option value="plus">plus Plane 20€</option>
+
+        </select>
+        <label for="pro">Scegli il piano Pro</label>
+        <input type="checkbox" name="pro" id="pro">
+        <!-- anche nel caso di carta di credito e cvv ho messo una maxlength -->
+        <label for="cCard">Carta dI Credito</label>
+        <input type="text" name="cCard" id="cCard" maxlength="16" required>
+        <label for="cvc">CVC</label>
+        <input type="password" name="cvc" id="cvc" maxlength="3" required>
+        <label for="expDate">Data Di Scadenza</label>
+        <input type="date" name="expDate" id="expdate">
+        <label for="bAddress">indirizzo di fatturazione</label>
+        <input type="text" name="bAddress" id="bAddress"><br>
+        <button type="submit">invia</button>
+
+      </fieldset>
+
     </form>
   </body>
 </html>
