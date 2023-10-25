@@ -1,0 +1,14 @@
+.article-container{
+    width: 500px;
+}
+.h2-container{
+    height: 400px;
+    color: blue;
+
+    background-image: url(assets/hands.png);
+}
+.p-container{
+    color: blue;
+    height: 400px;
+    background-image: url(assets/laptop.png);
+}
