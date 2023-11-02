@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+}
+.sidebar {
+  width: 200px;
+  height: 100%;
+  background-color: peru;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo_side {
+  height: 100px;
+  width: 100px;
+  background-image: url(http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcQoB77T2pEgDi5Nvyj5k03cegf3sBL9fEU1qXNx4Q28VFbUsWOJJIw2EbndsNMKL7ckUujR3eCa9vDP1coz_zA);
+  background-size: cover;
+  border-radius: 50%;
+  background-position: center;
+ 
+}
+.link {
+    display: flex;
+    align-items: center;
+  flex: 1;
+}
+.account{
+    padding: 20px;
+}
+

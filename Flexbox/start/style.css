@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+}
+.sidebar {
+  width: 200px;
+  height: 100%;
+  background-color: rgb(23, 23, 23);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+.link {
+  display: flex;
+  flex: 1;
+}
+.link ul {
+  padding: 20px;
+}
+.link li {
+  padding-top: 20px;
+  font-size: 1.5rem;
+  list-style: none;
+}
+.link li :hover {
+  color: grey;
+}
+.link i {
+  color: white;
+  margin: 10px;
+}
+.link a {
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+}
+.account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+.account p {
+  color: white;
+  padding-left: 25px;
+}
