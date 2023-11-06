@@ -2,7 +2,7 @@
     background-color: #011212;
 }
 
-#ball {
+.ball {
     width: 100px;
     height: 100px;
     background-color: #ff8800;
