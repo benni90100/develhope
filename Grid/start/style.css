@@ -5,8 +5,8 @@
 }
 
 .container {
-    width: 50vh;
-    height: 50vh;
+    height: 100%;
+    width: 25vw;
     background-color: rgb(232, 249, 255);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
