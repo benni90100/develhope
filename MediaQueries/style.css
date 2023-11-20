@@ -3,8 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-:root{
-    font-family: Arial, Helvetica, sans-serif;
+:root {
+  font-family: Arial, Helvetica, sans-serif;
 }
 /* con il solo display flex e scrivendo il flex-wrap: wrap la pagina è già responsiva senza 
 l'utilizzo della media query, tutta vista la consegna si scrive un grid layout con l'utilizzo 
@@ -15,13 +15,12 @@ delle media query per giustificare nelle tre viste previste  */
   width: 100%;
   margin: 0 auto;
 } */
-.container{
+.container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 20px;
   width: 90%;
   margin: 10px auto;
-  
 }
 
 .card-container {
@@ -53,34 +52,30 @@ delle media query per giustificare nelle tre viste previste  */
   width: 100%;
   padding: 0 5px;
 }
-.aaa{
-    display: flex;
+.aaa {
+  display: flex;
 }
-.card-footer-cont{
-    padding: 5px;
-    
+.card-footer-cont {
+  padding: 5px;
 }
-.card-footer-cont h4{
-    font-size: .9rem;
-    font-weight: 300;
-
+.card-footer-cont h4 {
+  font-size: 0.9rem;
+  font-weight: 300;
 }
-.card-footer-cont p{
-    font-size: 0.7rem;
-    color: white;
-
+.card-footer-cont p {
+  font-size: 0.7rem;
+  color: white;
 }
 
 .card-img img {
   width: 100%;
 }
-.kebab-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-   
+.kebab-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
 }
 .kebab {
   width: 3px;
@@ -89,7 +84,8 @@ delle media query per giustificare nelle tre viste previste  */
   border-radius: 100%;
   position: relative;
 }
-.kebab::before, .kebab::after {
+.kebab::before,
+.kebab::after {
   width: 100%;
   height: 100%;
   content: "";
@@ -97,49 +93,45 @@ delle media query per giustificare nelle tre viste previste  */
   background-color: #000000;
   border-radius: 50%;
   position: absolute;
-  
 }
 
-.kebab::after{
-    left: 7px;
+.kebab::after {
+  left: 7px;
 }
 
-.kebab::before{
-    left: -7px;
+.kebab::before {
+  left: -7px;
 }
-.card-like{
-    padding: 10px 20px;
+.card-like {
+  padding: 10px 20px;
 }
-span i{
+span i {
   padding: 5px;
   color: #00000095;
 }
-.card-content{
+.card-content {
   padding: 5px 7px;
 }
 
-.card-content p{
+.card-content p {
   font-size: 0.7rem;
-
 }
-.card-content span{
+.card-content span {
   font-weight: bolder;
 }
-@media screen and (max-width: 768px){
-  .container{display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  row-gap: 20px;
-  width: 90%;
-  margin: 10px auto;
+@media screen and (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    width: 90%;
+    margin: 10px auto;
   }
-
 }
-  
+
 @media screen and (max-width: 375px) {
-  .container{
+  .container {
     display: block;
-    padding:10px;
-    
+    padding: 10px;
   }
-  
 }
