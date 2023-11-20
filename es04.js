@@ -1,10 +1,9 @@
-function sumUntil(maxValue) {
-    let sum = 0
-   for (let i = 0; i <= maxValue; i++) {
-    sum += i
-     // ...
-   }
-   return sum
-}
 
-console.log(sumUntil(3)); // OUTPUT: 15
+const fruits = ["Mela", "Banana", "Kiwi", "Fragola"];
+
+function esclamativo(array) {
+  array.forEach(element => {
+    console.log(`${element}!`);
+  });
+}
+esclamativo(fruits)
