@@ -1,26 +1,86 @@
-const sum =  (a, b) => {
-    return a + b;
+function firstUncompletedNote(notes) {
+    let noteUncomplete = null;
+    notes.forEach(note => {
+       todoFalse = note.todos.find(todo=> todo.done === false)
+       if (todoFalse && !noteUncomplete){
+        noteUncomplete = note
+       }
+      
+    });
+    return noteUncomplete;
 }
 
-const subtract =  (a, b) => {
-    return a - b;
-}
+const notes = [
+    {
+        id: 1,
+        description: 'Workout program',
+        todos: [
+            {
+                id: 1,
+                name: 'Push ups - 10 x 3',
+                done: true
+            },
+            {
+                id: 2,
+                name: 'Abdominals - 20 x 3',
+                done: true
+            },
+            {
+                id: 3,
+                name: 'Tapis Roulant - 15min',
+                done: true
+            }
+        ]
+    },
+    {
+        id: 2,
+        description: 'Front-end Roadmap',
+        todos: [
+            {
+                id: 1,
+                name: 'Learn HTML',
+                done: true
+            },
+            {
+                id: 2,
+                name: 'Learn CSS',
+                done: false
+            },
+            {
+                id: 3,
+                name: 'Learn JavaScript',
+                done: true
+            },
+            {
+                id: 4,
+                name: 'Learn Angular',
+                done: false
+            }
+        ]
+    },
+    {
+        id: 3,
+        description: 'My Movies Library',
+        todos: [
+            {
+                id: 1,
+                name: 'La città incantata',
+                done: true
+            },
+            {
+                id: 2,
+                name: 'Avatar',
+                done: true
+            },
+            {
+                id: 3,
+                name: 'Titanic',
+                done: false
+            }
+        ]
+    }
+]
 
-const multiply = (a, b) => {
-    return a * b;
-}
-
-const divide = (a, b) => {
-    return a / b;
-}
-
-const log = function (value) {
-    console.log(value);
-}
-const sum1 = sum(2,4)
-const sum2 = sum(5,2)
-const moltiply = multiply(sum1, sum2)
-const sub = subtract(moltiply, 2)
-const result = divide (sub, 5)
-
-console.log(result);
+const noteInProgress = firstUncompletedNote(notes);
+// console.log('All notes: ', notes);
+console.log('First note in progress: ', noteInProgress);
