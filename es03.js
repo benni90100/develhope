@@ -1,13 +1,8 @@
 function firstUncompletedNote(notes) {
-    let noteUncomplete = null;
-    notes.forEach(note => {
-       todoFalse = note.todos.find(todo=> todo.done === false)
-       if (todoFalse && !noteUncomplete){
-        noteUncomplete = note
-       }
-      
-    });
-    return noteUncomplete;
+        let notaIncompleta = notes.find(note => note.todos.find(todo => todo.done === false))
+        return notaIncompleta;
+    
+
 }
 
 const notes = [
@@ -82,5 +77,4 @@ const notes = [
 ]
 
 const noteInProgress = firstUncompletedNote(notes);
-// console.log('All notes: ', notes);
 console.log('First note in progress: ', noteInProgress);
