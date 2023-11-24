@@ -1,11 +1,6 @@
-let tempoRimanente = 10;
+let tempoRimanente = 11;
 
 const contoAllaRovescia = ()=> {
-    if (tempoRimanente===10) {
-        console.log("conto alla rovescia in corso");
-        
-    }
-    
     tempoRimanente--
     console.log(tempoRimanente);
     if (tempoRimanente===0) {
@@ -13,6 +8,7 @@ const contoAllaRovescia = ()=> {
         clearInterval(tempoScaduto)
     }
 }
+console.log("conto alla rovescia in corso");
 
 let tempoScaduto = setInterval(contoAllaRovescia, 1000);
 
