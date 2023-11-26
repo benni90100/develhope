@@ -45,36 +45,36 @@
 // Filtra l'array cibo includendo solo gli elementi che contengono la lettera 'a'. Crea un nuovo array chiamato ciboConA.
 // Stampa a console l'array ciboConA.
 
-const frutta = ["banana", "nespola", "albicocca"]
-const verdura = ["spinaci", "cavolo", "melanzane"]
+// const frutta = ["banana", "nespola", "albicocca"]
+// const verdura = ["spinaci", "cavolo", "melanzane"]
 
-const cibo = [...frutta, ...verdura]
+// const cibo = [...frutta, ...verdura]
 
-cibo.unshift("carciofi")
-cibo.push("piselli")
-console.log(frutta);
-console.log(verdura);
-console.log(cibo);
+// cibo.unshift("carciofi")
+// cibo.push("piselli")
+// console.log(frutta);
+// console.log(verdura);
+// console.log(cibo);
 
-cibo.sort()
-console.log(cibo);
+// cibo.sort()
+// console.log(cibo);
 
-const ciboMaiuscolo = cibo.map(item => item.toUpperCase())
+// const ciboMaiuscolo = cibo.map(item => item.toUpperCase())
 
-console.log(ciboMaiuscolo);
+// console.log(ciboMaiuscolo);
 
-const copiaCibo = [...cibo]
-console.log(copiaCibo);
-// copiaCibo[3] = "patate"
-let [, patate] = copiaCibo
-patate = "patate"
-console.log(copiaCibo);
+// const copiaCibo = [...cibo]
+// console.log(copiaCibo);
+// // copiaCibo[3] = "patate"
+// let [, patate] = copiaCibo
+// patate = "patate"
+// console.log(copiaCibo);
 
-const ciboConA = copiaCibo.filter(item => item.includes("i"))
+// const ciboConA = copiaCibo.filter(item => item.includes("i"))
 
-console.log("i cibi con la a sono : " + ciboConA);
+// console.log("i cibi con la a sono : " + ciboConA);
 
-// carta forbice e sasso
+// // carta forbice e sasso
 
 // function morra() {
 //     let player1 = Math.floor(Math.random() * 3+1)
@@ -136,73 +136,73 @@ console.log("i cibi con la a sono : " + ciboConA);
 
 
 
-// class persons {
-//     constructor(name, age, hobby) {
+class persons {
+    constructor(name, age, hobby) {
 
-//         this.name = name;
-//         this.age = age;
-//         this.hobby= hobby;
-//     }
-// }
-
-
-// const names = ["alice", "barbara", "roberto", "antonio", "pietro", "nino"]
-// const hobby = ["pesca", "nuoto", "musica", "calcio", "informatica", "matematica"]
-// const age = [18, 51, 46, 35, 8, 49]
-// function startGeneration() {
-//     let peaple = []
-
-//     for (let i = 0; i < hobby.length; i++) {
-//         let person =new persons(names[i], age[i], hobby[i])
-//         peaple.push(person)
-//     }
-
-//     return peaple
-// }
-// const peaples = startGeneration()
+        this.name = name;
+        this.age = age;
+        this.hobby= hobby;
+    }
+}
 
 
-// function etaMedia(peaple) {
-//     const sumAgePeaple = peaples.reduce((a, peaple) => a + peaple.age, 0)
-//     return Math.round(sumAgePeaple / peaples.length)
-// }
-// let eta = etaMedia()
-// setTimeout(() => {
-//     console.log(peaples);
-// }, 500);
-// console.log(`l'età media è ${eta}`);
+const names = ["alice", "barbara", "roberto", "antonio", "pietro", "nino"]
+const hobby = ["pesca", "nuoto", "musica", "calcio", "informatica", "matematica"]
+const age = [18, 51, 46, 35, 8, 49]
+function startGeneration() {
+    let peaple = []
 
-// class Book {
-//     constructor(autore, titolo, pagine, anno) {
-//         this.autore = autore
-//         this.titolo = titolo
-//         this.pagine = pagine
-//         this.anno = anno
-//     }
-// }
+    for (let i = 0; i < hobby.length; i++) {
+        let person =new persons(names[i], age[i], hobby[i])
+        peaple.push(person)
+    }
 
-// function createbook() {
-//     const books = [
-//         new Book("connelly", "la ragazza di polver", 457, 1945),
-//         new Book("dan brown", "angeli e demoni", 600, 1960),
-//         new Book("philip k dick", "la svastica sul sole", 260, 1895),
-//         new Book("umberto eco", "il nome della rosa", 457,1977)
-//     ]
-//     return books
-// }
-// const totaBook = createbook()
-// function calcolaPagineMedie() {
-//     let sum = totaBook.reduce((a, totaBook)=> a + totaBook.pagine,0)
-//     return sum /totaBook.length
+    return peaple
+}
+const peaples = startGeneration()
+
+
+function etaMedia(peaple) {
+    const sumAgePeaple = peaples.reduce((a, peaple) => a + peaple.age, 0)
+    return Math.round(sumAgePeaple / peaples.length)
+}
+let eta = etaMedia()
+setTimeout(() => {
+    console.log(peaples);
+}, 500);
+console.log(`l'età media è ${eta}`);
+
+class Book {
+    constructor(autore, titolo, pagine, anno) {
+        this.autore = autore
+        this.titolo = titolo
+        this.pagine = pagine
+        this.anno = anno
+    }
+}
+
+function createbook() {
+    const books = [
+        new Book("connelly", "la ragazza di polver", 457, 1945),
+        new Book("dan brown", "angeli e demoni", 600, 1960),
+        new Book("philip k dick", "la svastica sul sole", 260, 1895),
+        new Book("umberto eco", "il nome della rosa", 457,1977)
+    ]
+    return books
+}
+const totaBook = createbook()
+function calcolaPagineMedie() {
+    let sum = totaBook.reduce((a, totaBook)=> a + totaBook.pagine,0)
+    return sum /totaBook.length
     
-// }
-// function libroPiuRecente() {
-//     const annoMax = Math.max(totaBook.anno)
-//     return totaBook.filter(totaBook => totaBook.anno===annoMax)
+}
+function libroPiuRecente() {
+    const annoMax = Math.max(totaBook.anno)
+    return totaBook.filter(totaBook => totaBook.anno===annoMax)
 
-// }
-// const media = calcolaPagineMedie()
-// console.log(media);
-// console.log(libroPiuRecente());
-// console.log(totaBook);
+}
+const media = calcolaPagineMedie()
+console.log(media)
+console.log(libroPiuRecente());
+console.log(totaBook);
 

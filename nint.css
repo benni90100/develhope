@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-size-adjust: ;
 }
 .grid-span-2{
     grid-row: span 2;
