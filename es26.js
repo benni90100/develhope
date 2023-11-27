@@ -1,6 +1,6 @@
 function performOperation(a, b, callback) {
     const c = a + b;
-    return displayResult(c)
+    return callback(c)
 }
 
 function displayResult(result) {
