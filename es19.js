@@ -1,8 +1,10 @@
-setInterval(function visualizzaOrologio() {
+function visualizzaOrologio() {
     const orarioCorrente = new Date();
     const ore = orarioCorrente.getHours();
     const minuti = orarioCorrente.getMinutes();
     const secondi = orarioCorrente.getSeconds();
     console.log(`Ora attuale: ${ore}:${minuti}:${secondi}`);
     
-}, 1000)
+}
+setInterval(visualizzaOrologio,1000)
+
