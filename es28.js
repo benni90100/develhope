@@ -1,6 +1,6 @@
 function performOperation(a, b, callback) {
     const c = a+b
-    displayResult(c)
+    callback(c)
 }
 
 function displayResult(result) {
@@ -11,4 +11,4 @@ function displayResult(result) {
     }
 }
 
-performOperation(5, "3", displayResult);
+performOperation(5, 3, displayResult);
