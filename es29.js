@@ -13,8 +13,10 @@ function fetchDataFromAPI(obj) {
     })
 }
 
-fetchDataFromAPI(obj).then(data=>{
+fetchDataFromAPI(obj)
+.then(data=>{
     console.log(data);
-}).catch((error) =>{
+})
+.catch((error) =>{
 console.log(error);
 })
