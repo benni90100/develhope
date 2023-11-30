@@ -19,10 +19,16 @@ studenti.forEach(element => {
 let unConNovanta = studenti.find(studente => studente.voto>=90)
 console.log(unConNovanta);
 
+
 function media(array) {
     const sum = array.reduce((a, studente)=> a + studente.voto,0)
     return Math.round(sum/array.length)
 }
+const mediaVoti = studenti.reduce((sum, studente) => sum + studente.voto, 0);
+console.log(mediaVoti);
+const voti = mediaVoti / studenti.length;
+console.log(voti)
+
 const mediaStudenti = media(studenti)
 console.log(mediaStudenti);
 

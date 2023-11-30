@@ -1,20 +1,20 @@
 const obj = {
     name: "John",
-    age: 15
+    age: 19
 }
 function fetchDataFromAPI(obj) {
     return new Promise((resolve, reject) => {
         if (obj.age>18) {
-            resolve(`ciao`)
+            resolve(`puoi bere un drink ${obj.name}`)
         }
         else{
-            reject("error")
+            reject(`aspetta di compiere 18 anni ${obj.name}`)
         }
     })
 }
 
 fetchDataFromAPI(obj).then(data=>{
     console.log(data);
-}).catch(("error") =>{
-console.log("error");
+}).catch((error) =>{
+console.log(error);
 })

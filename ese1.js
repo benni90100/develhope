@@ -225,18 +225,66 @@
 
 
 
-function toSplit(num) {
-    if (typeof (num) === "number" && num>9) {
-        const numString = num.toString();
-        const numbsplit = numString.split("").map((item) => Number(item)).reduce((a, b) => a + b, 0);
-        return numbsplit
-    }
-    else {
-       return console.log("error");
-    }
+// function toSplit(num) {
+//     if (typeof (num) === "number" && num>9) {
+//         const numString = num.toString();
+//         const numbsplit = numString.split("").map((item) => Number(item)).reduce((a, b) => a + b, 0);
+//         return numbsplit
+//     }
+//     else {
+//        return console.log("error");
+//     }
+// }
+
+// let number = "113513"
+// const split = toSplit(number)
+
+// console.log(split);
+
+
+// function calcolaAsync(a, b, callback) {
+//     setTimeout(() => {
+//         const somma = a + b;
+//         callback(somma)
+//     }, 2000);
+// }
+
+// function callbackResult(result) {
+//     console.log(result);
+// }
+
+// calcolaAsync(5, 10, callbackResult)
+
+// function randomNum(cb) {
+//     const random = []
+//     for (let i = 0; i < 10; i++) {
+//         let randomN= Math.floor(Math.random()*(10+1))
+//         random.push(randomN)
+//     }
+    
+//     console.log();cb(random)
+//     return arr
+// }
+// function sum(array) {
+//     return array.reduce((a, n)=> a +n , 0) 
+// }
+// const sumArray= randomNum(sum)
+// console.log(sumArray);
+
+// function theNumbers(x, y, cb) {
+//     const numbers = []
+//     for (let i = y+1; i < y+x; i++) {
+//         numbers.push(i)
+    
+        
+//     }
+//    return numbers
+// }
+
+
+// const array = theNumbers(10,3)
+// console.log(array);
+
+function name(params) {
+    
 }
-
-let number = "113513"
-const split = toSplit(number)
-
-console.log(split);
