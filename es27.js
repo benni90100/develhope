@@ -15,8 +15,7 @@ function fetchDataFromAPI(callback) {
 }
 
 function handleData(data) {
-    return console.log(`${data.name } ${data.age}`);
-    
+    return console.log(`${data.name} ${data.age}`);
 }
 
 fetchDataFromAPI(handleData);
