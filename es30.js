@@ -32,7 +32,10 @@ fetchUserData()
     .then(data => fetchUserPosts(data.id, data.name))
     .then(userPost => {
         console.log("l'utente", name)
-        console.log("i suoi post sono:", userPost);
+        userPost.forEach(element => {
+            console.log(element);
+        });
+       
     })
     .catch(err => console.log(err))
 
