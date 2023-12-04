@@ -103,31 +103,31 @@
 
 //     if (player1==="sasso" && player2 === "forbici") {
 //         console.log(`${player1} vince contro ${player2} il vincitore è player1`);
-//     } 
+//     }
 //     else if(player1==="sasso" && player2 === "carta") {
 //         console.log(`${player2} vince contro ${player1} il vincitore è player2`);
-//     } 
+//     }
 //      else if (player1==="sasso" && player2 === "sasso") {
 //         console.log(`pareggio`);
 //     }
 //     else if (player1 === "forbici" && player2 === "carta") {
 //         console.log(`${player1} vince contro ${player2} il vincitore è player2`);
-//     } 
+//     }
 //     else if (player1 === "forbici" && player2 === "sasso") {
 //         console.log(`${player2} vince contro ${player1} il vincitore è player2`);
-//     } 
+//     }
 //     else if (player1 === "forbici" && player2 === "forbici") {
 //         console.log("pareggio");
-//     } 
+//     }
 //     else if (player1 === "carta" && player2 === "sasso") {
 //         console.log(`${player1} vince contro ${player2} il vincitore è player1`);
-//     } 
+//     }
 //     else if (player1 === "carta" && player2 === "forbici") {
 //         console.log(`${player2} vince contro ${player1} il vincitore è player2`);
-//     } 
+//     }
 //     else if (player1 === "carta" && player2 === "carta") {
 //         console.log("pareggio");
-//     } 
+//     }
 
 // }
 // morra()
@@ -261,12 +261,12 @@
 //         let randomN= Math.floor(Math.random()*(10+1))
 //         random.push(randomN)
 //     }
-    
+
 //     console.log();cb(random)
 //     return arr
 // }
 // function sum(array) {
-//     return array.reduce((a, n)=> a +n , 0) 
+//     return array.reduce((a, n)=> a +n , 0)
 // }
 // const sumArray= randomNum(sum)
 // console.log(sumArray);
@@ -275,8 +275,8 @@
 //     const numbers = []
 //     for (let i = y+1; i < y+x; i++) {
 //         numbers.push(i)
-    
-        
+
+
 //     }
 //    return numbers
 // }
@@ -285,6 +285,42 @@
 // const array = theNumbers(10,3)
 // console.log(array);
 
-function name(params) {
-    
+// fetch('https://jsonplaceholder.typicode.com/todos')
+//     .then(response => response.json())
+//     .then(json => console.log(json))
+
+// function job() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("hello word")
+//         }, 2000);
+//     })
+// }
+// job()
+// .then(data => console.log(data))
+// .catch(err => console.error(err))
+
+
+// Your function must always return a promise
+// If data is not a number, return a promise rejected instantly and give the data "error"(in a string)
+// If data is an odd number, return a promise resolved 1 second later and give the data "odd"(in a string)
+// If data is an even number, return a promise rejected 2 seconds later and give the data "even"(in a string)
+
+function job(number) {
+    return new Promise((resolve, reject) => {
+        if (typeof (number) !== "number") {
+            reject("error")
+        } else if (number % 2 === 0) {
+            setTimeout(() => {
+                resolve("odd")
+            }, 1000);
+        } else {
+            setTimeout(() => {
+                resolve("even")
+            }, 2000);
+        }
+    })
 }
+job(2)
+    .then(data => console.log(data))
+    .catch(err => console.error(err))
