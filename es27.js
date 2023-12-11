@@ -9,9 +9,9 @@ const obj = {
 
 
 function fetchDataFromAPI(callback) {
-    setTimeout(() => {
-        callback(obj)
-    }, 2000);
+    return new Promise((resolve, reject) => {
+        resolve(obj)
+    })
 }
 
 function handleData(data) {

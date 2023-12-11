@@ -28,14 +28,23 @@ function fetchUserPosts(userId, userName) {
     })
 }
 
-fetchUserData()
-    .then(data => fetchUserPosts(data.id, data.name))
-    .then(userPost => {
-        console.log("l'utente", name)
-        userPost.forEach(element => {
-            console.log(element);
-        });
+// fetchUserData()
+//     .then(data => fetchUserPosts(data.id, data.name))
+//     .then(userPost => {
+//         console.log("l'utente", name)
+//         userPost.forEach(element => {
+//             console.log(element);
+//         });
        
-    })
-    .catch(err => console.log(err))
-
+//     })
+//     .catch(err => console.log(err))
+async function getUserData() {
+    const userData = await fetchUserData()
+    const userPost = await fetchUserPosts(user.id, user.name)
+    console.log(userData);
+    userPost.forEach(element => {
+        console.log(element);
+    });
+    
+}
+getUserData()

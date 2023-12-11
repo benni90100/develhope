@@ -61,3 +61,15 @@ function fetchJobById(id) {
 
 Promise.all([fetchJobById(1), fetchPersonById(1)]).then(data=> console.log(data))
 .catch(err=> console.error(err))
+
+async function getData() {
+    try {
+        const job = await [fetchJobById(1), fetchJobById(1)]
+        // const id = fetchPersonById(1)
+        console.log(job);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+getData()

@@ -21,20 +21,20 @@
 
 
 
-// function performOperation(a, b, callback) {
-//     const c = a + b
-//     callback(c)
-// }
+function performOperation(a, b, cb) {
+    const c = a + b
+    cb(c)
+}
 
-// function displayResult(result) {
-//     if (typeof (result) === "number") {
-//         console.log(result);
-//     } else {
-//         console.log("error");
-//     }
-// }
+function displayResult(result) {
+    if (typeof (result) === "number") {
+        console.log(result);
+    } else {
+        console.log("error");
+    }
+}
 
-// performOperation(5, 5, displayResult);
+performOperation(5, 5, displayResult);
 
 // function stepOne(cb) {
 //     setTimeout(() => {
@@ -58,22 +58,22 @@
 // stepOne(() =>  stepTwo(() =>  stepTree() ) )
 
 
-function myPromise(a) {
-    return new Promise((res, rej) => {
-        if (a > 10) {
-            setTimeout(() => {
-                res("promise ok")
-            }, 2000);
-        } else {
-            setTimeout(() => {
-                rej("promise ko")
-            }, 2000);
-        }
-    })
-}
+// function myPromise(a) {
+//     return new Promise((res, rej) => {
+//         if (a > 10) {
+//             setTimeout(() => {
+//                 res("promise ok")
+//             }, 2000);
+//         } else {
+//             setTimeout(() => {
+//                 rej("promise ko")
+//             }, 2000);
+//         }
+//     })
+// }
 
-myPromise(8)
-    .then((data) => {
-        console.log(data);
-    })
-    .catch(err => console.log(err))
+// myPromise(8)
+//     .then((data) => {
+//         console.log(data);
+//     })
+//     .catch(err => console.log(err))

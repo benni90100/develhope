@@ -14,7 +14,17 @@ function fetchDataFromAPI() {
         }
     })
 }
+async function getSuccessPromise() {
+    try {
+        const successFunction = await fetchDataFromAPI()
+        console.log(successFunction);
+    } catch (error) {
+        console.error(error);
+    }
+}
+getSuccessPromise()
 
-fetchDataFromAPI()
-.then(data=>console.log(data))
-.catch(err=> console.error(err))
+
+// fetchDataFromAPI()
+// .then(data=>console.log(data))
+// .catch(err=> console.error(err))
