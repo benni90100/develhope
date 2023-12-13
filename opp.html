@@ -1,0 +1,33 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.querySelector(".btn")
+    const firstname = document.querySelector(".firstname")
+    const lastname = document.querySelector(".lastname")
+    const email = document.querySelector(".email")
+    const title = document.querySelector(".title-name")
+
+    class dataForm {
+        constructor(firstname, lastname, email) {
+            this.firstname = firstname,
+                this.lastname = lastname,
+                this.email = email
+        }
+        setTitle() {
+
+            title.innerText = firstname.value
+
+            localStorage.setItem("firstname", firstname.value)
+            localStorage.setItem("email", email.value)
+            localStorage.setItem("lastname", lastname.value)
+
+        }
+        saveData() {
+            const saveEmail = localStorage.getItem("email");
+            const saveLastName = localStorage.getItem("lastname");
+            title.innerText = localStorage.getItem("firstname")
+
+        }
+    }
+    saveData()
+    btn.addEventListener("click", dataForm.setTitle)
+
+})

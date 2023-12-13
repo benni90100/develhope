@@ -52,12 +52,16 @@
         localStorage.setItem("lastname", lastname.value)
         
         }
-        const saveEmail = localStorage.getItem("email");
-        const saveLastName = localStorage.getItem("lastname");
-        title.innerText = localStorage.getItem("firstname")
-
+        function load() {
+            const saveEmail = localStorage.getItem("email");
+            const saveLastName = localStorage.getItem("lastname");
+            title.innerText = localStorage.getItem("firstname")
+        }
+        
+        load()
         btn.addEventListener("click", setTitle)
         
+
             })
     </script>
     </body>
