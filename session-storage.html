@@ -35,6 +35,7 @@
         <button class="btn">Salva</button>
         <p class="printedform"></p>
         <script>
+        
         document.addEventListener("DOMContentLoaded",()=>{
         const btn = document.querySelector(".btn")
         const firstname = document.querySelector(".firstname")
@@ -42,31 +43,26 @@
         const email = document.querySelector(".email")
         const title = document.querySelector(".title-name")
         
-        class dataForm {
-            constructor(firstname, lastname, email){
-                this.firstname = firstname,
-                this.lastname=lastname,
-                this.email=email
-            }
-            setTitle() {
+
+        function setTitle() {
         
         title.innerText = firstname.value
 
-        localStorage.setItem("firstname", firstname.value)
-        localStorage.setItem("email", email.value)
-        localStorage.setItem("lastname", lastname.value)
+        sessionStorage.setItem("firstname", firstname.value)
+        sessionStorage.setItem("email", email.value)
+        sessionStorage.setItem("lastname", lastname.value)
         
         }
-        saveData(){
-        const saveEmail = localStorage.getItem("email");
-        const saveLastName = localStorage.getItem("lastname");
-        title.innerText = localStorage.getItem("firstname")
+        function load() {
+            const saveEmail = sessionStorage.getItem("email");
+            const saveLastName = sessionStorage.getItem("lastname");
+            title.innerText = sessionStorage.getItem("firstname")
+        }
+        
+        load()
+        btn.addEventListener("click", setTitle)
+        
 
-        }
-        }
-        saveData()
-        btn.addEventListener("click", dataForm.setTitle)
-        
             })
     </script>
     </body>
