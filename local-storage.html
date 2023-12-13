@@ -50,21 +50,14 @@
         localStorage.setItem("firstname", firstname.value)
         localStorage.setItem("email", email.value)
         localStorage.setItem("lastname", lastname.value)
-
+        
+        }
         const saveEmail = localStorage.getItem("email");
         const saveLastName = localStorage.getItem("lastname");
-        const saveFirstName = localStorage.getItem("firstname")
-            
-        if (saveFirstName) {
-                firstname.value = saveFirstName;
-            }
-        }
-        
+        title.innerText = localStorage.getItem("firstname")
 
-        btn.addEventListener("click", ()=>{
-        setTitle()    
-            
-        })
+        btn.addEventListener("click", setTitle)
+        
             })
     </script>
     </body>
