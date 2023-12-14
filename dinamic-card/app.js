@@ -24,3 +24,4 @@ async function getData() {
 console.log(getData);
 
 button.addEventListener("click", getData)
+input.addEventListener("keypress", (e)=>{if (e.key==="Enter") {getData()}})
