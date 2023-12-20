@@ -34,6 +34,7 @@
         </div>
         <button class="btn">Salva</button>
         <p class="printedform"></p>
+
         <script>
             document.addEventListener("DOMContentLoaded",()=>{
         const btn = document.querySelector(".btn")
@@ -44,17 +45,26 @@
         
 
         function setTitle() {
+            const obj = {
+            firstname: firstname.value,
+            email: email.value,
+            lastname: lastname.value
+            }
         
-        title.innerText = firstname.value
+        const stringObj=JSON.stringify(obj)
+        title.innerText = obj.firstname
+        console.log(stringObj);
+        localStorage.setItem("obj", stringObj)
 
-        localStorage.setItem("firstname", firstname.value)
-        localStorage.setItem("email", email.value)
-        localStorage.setItem("lastname", lastname.value)
         
         }
         function load() {
-           
-            title.innerText = localStorage.getItem("firstname")
+            
+            const loadContent =JSON.parse(localStorage.getItem("obj"))
+            if (loadContent) {
+            title.innerText = loadContent.firstname    
+            }
+            
         }
         
         load()
